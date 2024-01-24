@@ -1,5 +1,5 @@
 {
-  "name": "webpack-cli",
+  "name": "react-vite-cli",
   "private": true,
   "version": "0.0.0",
   "workspaces": [
@@ -7,10 +7,11 @@
     "packages/*"
   ],
   "scripts": {
-    "start:test-app": "cd apps/test-app && concurrently \"yarn dev --port 8080\"",
-    "start:test-app-dev": "concurrently \"yarn tailwind\" \"yarn start:test-app\"",
-    "build:test-app": "cd apps/test-app && concurrently \"yarn build\"",
-    "tailwind": "postcss packages/styles/tailwind.css -o packages/styles/global.css --watch"
+    "start:demo-app": "cd apps/demo-app && concurrently \"yarn dev --port 8080\"",
+    "start:demo-app-dev": "concurrently \"yarn tailwind\" \"yarn start:demo-app\"",
+    "build:demo-app": "cd apps/demo-app && concurrently \"yarn build\"",
+    "tailwind": "postcss packages/styles/tailwind.css -o packages/styles/global.css --watch",
+    "create-app": "cd apps && yarn create vite"
   },
   "dependencies": {
     "@tanstack/router-vite-plugin": "^1.8.2",
